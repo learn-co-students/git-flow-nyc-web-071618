@@ -21,7 +21,7 @@ describe "GIT" do
 
   it "4. What command allows you to add all previously all tracked, modified files
       and create a message, 'add img to index' for the commit in one command?" do
-    answer = "?"
+    answer = "git commit -am 'add img to index'"
     encoded_answer = "00565151beeb1fa3682d6386399eaf87b788a5bc"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -76,7 +76,7 @@ describe "GIT" do
 
   it "11. What command do you run to update the local master branch with the 
       master branch on the remote 'upstream'?" do
-    answer = "git pull"
+    answer = "git fetch upstream master"
     encoded_answer = "10ce0782f27a2e126f7fe0f12dd189cc16578e26"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -164,7 +164,7 @@ describe "GIT" do
       that you create: for instance, a branch made off of master will look exactly
       like a branch made off of `add-walrus-and-polar-bear`" do
     # "true" or "false", in a string
-    answer = "true"
+    answer = "false"
 
     encoded_answer = "7cb6efb98ba5972a9b5090dc2e517fe14d12cb04"
     expect(encode(answer)).to eq(encoded_answer)
@@ -247,7 +247,7 @@ describe "GIT" do
      assuming no one has pushed to your remote since you cloned it, will 'git status' say
      you're ahead or behind origin/master?" do
     # "ahead" or "behind" or "ahead and behind"
-    answer = "s"
+    answer = "ahead"
     encoded_answer = "a7481340412e5d73e6c5c8de4ef9285b85502d5a"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -256,7 +256,7 @@ describe "GIT" do
       someone else pushes two commits to it, will 'git status' say you are ahead or 
       behind when you run it at 12:05pm" do
     # "ahead" or "behind" or "ahead and behind"
-    answer = "?"
+    answer = "behind"
     encoded_answer = "fb6dbd81382d78f0f0633759a9c6033858e445b5"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -265,7 +265,7 @@ describe "GIT" do
      and one developer has pushed to your remote since you cloned it, 
      will 'git status' say you're ahead or behind (or both) origin/master?" do
     # "ahead" or "behind" or "ahead and behind"
-    answer = "?"
+    answer = "ahead and behind"
     encoded_answer = "d81d22fb57ad5589d12d6363f4160b33232c3510"
     expect(encode(answer)).to eq(encoded_answer)
   end
